@@ -4,6 +4,7 @@
 @import "base";
 @import url(http://fonts.googleapis.com/css?family=Roboto|Droid+Serif);
 @import "compass/css3";
+@import "compass/typography/links/unstyled-link";
 
 $bg-color: #F8E4C1;
 $bg-secondary-color: #FFEDBF;
@@ -47,7 +48,10 @@ main {
           }
 
           a.donate {
-              @include sassy-button("simple");
+              @include sassy-button;
+              @include sassy-button-gradient("simple", $header-color);
+              @include unstyled-link();
+              color: white;
           }
       }
   }
