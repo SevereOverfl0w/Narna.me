@@ -55,6 +55,31 @@ main {
           }
       }
   }
+
+  #vote {
+      @include span-columns(1, 1);
+
+      article {
+          background-color: $bg-secondary-color;
+          padding: 1em;
+          @include box-shadow(rgba(shade($bg-secondary-color, 25%), 0.75) 2px 2px);
+          @include border-radius(4px);
+      }
+
+      a {
+          @include sassy-button;
+          @include unstyled-link;
+          color: white;
+      }
+
+      a:nth-child(odd) {
+          @include sassy-button-gradient("simple", $header-color);
+      }
+
+      a:nth-child(even) {
+          @include sassy-button-gradient("simple", #59BAA9);
+      }
+  }
 }
 
 
@@ -67,4 +92,8 @@ body {
 #{headings()}{
     color: $header-color;
     font-family: "Droid Serif", serif;
+}
+
+section {
+    padding-bottom: 2em;
 }
