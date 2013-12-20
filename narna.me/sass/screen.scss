@@ -45,6 +45,10 @@ main {
           dl {
               font-size: small;
           }
+
+          a.donate {
+              @include sassy-button("simple");
+          }
       }
   }
 }
@@ -60,5 +64,3 @@ body {
     color: $header-color;
     font-family: "Droid Serif", serif;
 }
-
-
