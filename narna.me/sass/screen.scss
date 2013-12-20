@@ -97,3 +97,16 @@ body {
 section {
     padding-bottom: 2em;
 }
+
+nav {
+    position: fixed;
+    right: 20px;
+
+    ul {
+        list-style: none;
+
+        li a:after{
+            content: "#";
+        }
+    }
+}
