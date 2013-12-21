@@ -32,6 +32,8 @@ main {
       p {
           font-weight: bold;
       }
+
+
   }
 
   #donate {
@@ -148,3 +150,11 @@ nav {
         }
     }
 }
+
+#playerCount {
+    background-color: $bg-secondary-color;
+    padding: 1em;
+    @include box-shadow(rgba(shade($bg-secondary-color, 25%), 0.75) 2px 2px);
+    @include border-radius(4px);
+}
+
