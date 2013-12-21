@@ -28,6 +28,10 @@ main {
           font-size: 3em;
           @include text-shadow(rgba($header-color, 0.25) 2px 2px);
       }
+
+      p {
+          font-weight: bold;
+      }
   }
 
   #donate {
@@ -46,6 +50,11 @@ main {
 
           dl {
               font-size: small;
+          }
+
+          .opt-img {
+              width: 3em;
+              float: right;
           }
 
           a.donate {
