@@ -13,6 +13,7 @@ var currentTallest = 0,
 
      // we just came to a new row.  Set all the heights on the completed row
      for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].children('.donate').css( "margin-top", (currentTallest - rowDivs[currentDiv].height()));
        rowDivs[currentDiv].height(currentTallest);
      }
 
@@ -32,6 +33,7 @@ var currentTallest = 0,
    
   // do the last row
    for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].children('.donate').css( "margin-top", (currentTallest - rowDivs[currentDiv].height()));
      rowDivs[currentDiv].height(currentTallest);
    }
    

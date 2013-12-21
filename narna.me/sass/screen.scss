@@ -117,7 +117,7 @@ nav {
         }
 
         li a:hover {
-            color: $font-color;
+            color: lighten($header-color, 25%);
         }
 
         li a:after{
