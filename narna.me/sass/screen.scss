@@ -123,10 +123,23 @@ nav {
             cursor: pointer;
             @include transition;
             font-size: 1.3em;
+
+            span { 
+                opacity: 0; 
+                position: absolute;
+            }
         }
 
         li a:hover {
             color: lighten($header-color, 25%);
+
+            span { 
+                    opacity: 100; 
+                    color: $header-color;
+                    right: 1em;
+                    margin-right: 1em;
+                    @include transition;
+            }
         }
 
         li a:after{
