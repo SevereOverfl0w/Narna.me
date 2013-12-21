@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto|Droid+Serif);
 @import "compass/css3";
 @import "compass/typography/links/unstyled-link";
+@import "compass/css3/transition";
 
 $bg-color: #F8E4C1;
 $bg-secondary-color: #FFEDBF;
@@ -109,8 +110,14 @@ nav {
 
         li a{
             @include unstyled-link;
-            color: white;
+            color: $header-color;
             cursor: pointer;
+            @include transition;
+            font-size: 1.3em;
+        }
+
+        li a:hover {
+            color: $font-color;
         }
 
         li a:after{
