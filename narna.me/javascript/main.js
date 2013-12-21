@@ -50,5 +50,5 @@ function calcBoxes(){
     });
 }
 
-$(calcBoxes);
+$(window).load(calcBoxes);
 $(window).resize(calcBoxes);
