@@ -3,6 +3,7 @@
 
 @import "susy";
 @import "sassy-buttons";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 // ---------------------------------------------------------------------------
 // Basic Grid
@@ -13,3 +14,7 @@ $gutter-width   : 1em;
 $grid-padding   : $gutter-width;
 
 $show-grid-backgrounds  : true;
+
+[class*="fa-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}

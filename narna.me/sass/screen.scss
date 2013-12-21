@@ -52,6 +52,7 @@ main {
               @include sassy-button-gradient("simple", $header-color);
               @include unstyled-link();
               color: white;
+              cursor: pointer;
           }
       }
   }
@@ -70,6 +71,7 @@ main {
           @include sassy-button;
           @include unstyled-link;
           color: white;
+          cursor: pointer;
       }
 
       a:nth-child(odd) {
@@ -105,8 +107,15 @@ nav {
     ul {
         list-style: none;
 
+        li a{
+            @include unstyled-link;
+            color: white;
+            cursor: pointer;
+        }
+
         li a:after{
-            content: "#";
+            content: "\f111";
+            font-family: 'FontAwesome';
         }
     }
 }
