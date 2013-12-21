@@ -27,6 +27,7 @@ main {
       #title {
           font-size: 3em;
           @include text-shadow(rgba($header-color, 0.25) 2px 2px);
+          margin: 0.5em;
       }
 
       p {
@@ -152,9 +153,11 @@ nav {
 }
 
 #playerCount {
-    background-color: $bg-secondary-color;
-    padding: 1em;
-    @include box-shadow(rgba(shade($bg-secondary-color, 25%), 0.75) 2px 2px);
+    margin: 1em;
+    padding: 0.5em;
+    background-color: $font-color;
+    @include box-shadow(rgba(lighten($font-color, 20%), 0.75) 2px 2px);
     @include border-radius(4px);
+    color: $bg-color;
 }
 
