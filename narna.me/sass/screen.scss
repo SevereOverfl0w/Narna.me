@@ -17,6 +17,8 @@ $break: 3;
 /* -------------------------------------------------------------------------*/
 /* Layout */
 
+@include border-box-sizing;
+
 main {
   @include container($total-columns, $break);
 
