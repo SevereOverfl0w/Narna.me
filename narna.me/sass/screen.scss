@@ -14,8 +14,6 @@ $header-color: #F54828;
 
 $break: 3;
 
-/* -------------------------------------------------------------------------*/
-/* Layout */
 
 .panel {
     background-color: $bg-secondary-color;
@@ -24,9 +22,11 @@ $break: 3;
     @include box-shadow(rgba(shade($bg-secondary-color, 25%), 0.75) 2px 2px);
     @include border-radius(4px);
 }
-
-
 @include border-box-sizing;
+
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
 
 main {
   @include container($total-columns, $break);
@@ -49,9 +49,6 @@ main {
   }
 
   #donate {
-      //@include span-columns(12, 12);
-      //@include span-columns(1, 1);
-
       .option {
           @include span-columns(1, 1);
           @include at-breakpoint($break){
@@ -90,14 +87,8 @@ main {
   }
 
   #vote {
-      //@include span-columns(1, 1);
-
       article {
           @extend .panel;
-          //background-color: $bg-secondary-color;
-          //padding: 1em;
-          //@include box-shadow(rgba(shade($bg-secondary-color, 25%), 0.75) 2px 2px);
-          //@include border-radius(4px);
       }
 
       a {
