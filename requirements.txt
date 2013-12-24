@@ -1,0 +1,9 @@
+Flask==0.10.1
+Flask-Compass==0.2
+Flask-Mail==0.9.0
+Jinja2==2.7.1
+MarkupSafe==0.18
+Werkzeug==0.9.4
+blinker==1.3
+itsdangerous==0.23
+wsgiref==0.1.2
