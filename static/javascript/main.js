@@ -32,3 +32,7 @@ function updateCount(){
 
 updateCount();
 setInterval(updateCount, 5000);
+
+$('.alert .close').click(function(){
+    $(this).parent().fadeOut(function(){ $(this).remove()});
+});

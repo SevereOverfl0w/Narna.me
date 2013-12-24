@@ -32,7 +32,6 @@ main {
   @include container($total-columns, $break);
 
   #main {
-      clear: both;
       text-align: center;
 
       #title {
@@ -202,14 +201,14 @@ nav {
 }
 
 #playerCount {
-    margin: 1em;
     padding: 0.5em;
+    margin-bottom: 1em;
     background-color: $font-color;
     @include box-shadow(rgba(lighten($font-color, 20%), 0.75) 2px 2px);
     @include border-radius(4px);
     color: $bg-color;
+    display: inline-block;
 }
-
 
 hr {
     margin: 17px 0 18px;
@@ -218,4 +217,16 @@ hr {
     border: none;
     border-top: 1px solid shade($bg-color, 10%);
     border-bottom: 1px solid lighten($bg-color, 8%); 
+}
+
+.alert {
+    background-color: $font-color;
+    color: white;
+    @include border-radius(5px);
+    padding: 0.5em;
+}
+
+.alert .close {
+    float: right;
+    cursor: pointer;
 }

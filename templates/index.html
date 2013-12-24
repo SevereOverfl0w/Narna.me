@@ -22,6 +22,11 @@
             <h1 id="title">Narna</h1>
             <p>Welcome to Narna.me, we're currently undergoing some changes</p>
             <span id="playerCount">Loading player count...</span>
+            {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+            <div class="alert">{{ message }}<span class="close">&times;</span></div>
+            {% endfor %}
+            {% endwith %}
         </section>
 	    <hr>
         <section id="donate">

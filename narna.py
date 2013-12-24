@@ -1,8 +1,10 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, copy_current_request_context, request, flash
 from flask.ext.compass import Compass
-from flask.ext.mail import Mail
+from flask.ext.mail import Mail, Message
+from threading import Thread
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'CHANGEME'
+app.config.from_object('config')
 compass = Compass(app)
 mail = Mail(app)
 
@@ -21,6 +23,14 @@ class Contact(Form):
 def index():
     form = Contact()
     if form.validate_on_submit():
+        @copy_current_request_context
+        def send_message():
+            msg = Message("Narna.me contact form", recipients=app.config['ADMINS'])
+            msg.body = render_template('email.txt', data=form.data, request=request)
+            mail.send(msg)
+
+        Thread(name='mail_sender', target=send_message).start()
+        flash("Your message has been sent!")
         return redirect('/') # Because laziness
 
     return render_template('index.html', form=form)

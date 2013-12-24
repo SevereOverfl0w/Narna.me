@@ -1,0 +1,12 @@
+Hello!
+
+Somebody used the Narna.me contact form!
+
+[Name]: {{ data.name }}
+[Subject]: {{ data.subject }}
+[Message]: {{ data.message }}
+
+Other details:
+IP: {{ request.remote_addr }}
+
+Do not reply to this email. It is automated.
