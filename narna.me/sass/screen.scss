@@ -162,6 +162,10 @@ nav {
             content: "\f111";
             font-family: 'FontAwesome';
         }
+
+        li#github a:after {
+            content: "\f09b";
+        }
     }
 }
 
