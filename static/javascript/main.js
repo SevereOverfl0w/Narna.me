@@ -21,7 +21,12 @@ $(window).resize(calcBoxes);
 
 function updateCount(){ 
             $.getJSON('https://api.syfaro.net/minecraft/1.2/server/info?ip=sv.narna.me', function(data){
-                $('#playerCount').text(data.players + " / " + data.maxPlayers + " Online");
+                var el = $('#playerCount')
+                if data.status == "error"{
+                    el.text(data.error);
+                } else {
+                    el.text(data.players + " / " + data.maxPlayers + " Online");
+                }
             });
 }
 
