@@ -18,9 +18,10 @@ Install
 - Install [Virtualenv](https://pypi.python.org/pypi/virtualenv) using [Pip](https://pypi.python.org/pypi/pip)
 - Create a VirtualEnv within root `virtualenv2 env`
 - Install dependencies `env/bin/pip install -r requirements.txt`
+- Copy config.py.example to config.py and adjust to your liking
 
 
 Running
 -------
 Source your virtualenv `source env/bin/activate` on Linux.
-Python2 narna.py
+`Python2 narna.py`
