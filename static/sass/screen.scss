@@ -108,6 +108,38 @@ main {
           @include sassy-button-gradient("simple", #59BAA9);
       }
   }
+
+  #contact {
+    input[type=submit]{
+        @include sassy-button;
+        @include sassy-button-gradient("simple", $header-color);
+    }
+    
+    input:not([type=submit]), textarea{
+        width: 80%;
+        display: block;
+    }
+    
+    input, textarea{
+        margin: 1em;
+    }
+    
+    textarea {
+        height: 10em;
+    }
+
+    ul.error {
+        list-style: none;
+        display: inline;
+        padding-left: 1em;
+
+        li {
+            color: red;
+            display: inline;
+            font-size: small;
+        }
+    }
+  }
 }
 
 

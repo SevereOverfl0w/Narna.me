@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link href="{{ url_for('static', filename='stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <title>Narna | Home</title>
 </head>
 <body>
@@ -13,6 +13,7 @@
             <li><a class="scroll" href="#main"><span>Main</span></a></li>
             <li><a class="scroll" href="#donate"><span>Donate</span></a></li>
             <li><a class="scroll" href="#vote"><span>Vote</span></a></li>
+            <li><a class="scroll" href="#contact"><span>Contact</span></a></li>
             <li id="github"><a href="http://github.com/SevereOverfl0w/Narna.me"><span>Github</span></a></li>
         </ul>
     </nav>
@@ -195,8 +196,37 @@
 		<a href="http://mineservers.com/server/14091/vote">Mineservers.com</a> 
 	   </article>
         </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+
+            {% macro render_field(field) %}
+                {{ field.label }}
+                {% if field.errors %}
+                <ul class="error">
+                {% for error in field.errors %}
+                <li>{{ error}}</li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+                {{ field(placeholder=field.description) }}
+            {% endmacro %}
+            <form action="" method="POST">
+                {{ form.hidden_tag() }}
+                {{ render_field(form.name) }}
+                {{ render_field(form.subject) }}
+                {{ render_field(form.message) }}
+                {{ form.submit() }}
+            </form>
+        </section>
     </main>
     <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
     <script src="{{ url_for('static', filename='javascript/smooth-scroll.js') }}"></script>
+
+    {% if not form.validate() %}
+    <script>
+        $('#contact').scrollIntoView(true);
+    </script>
+    {% endif %}
 </body>
 </html>
