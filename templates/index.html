@@ -228,7 +228,7 @@
     <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
     <script src="{{ url_for('static', filename='javascript/smooth-scroll.js') }}"></script>
 
-    {% if not form.validate() %}
+    {% if form.errors %}
     <script>
         $('#contact')[0].scrollIntoView();
     </script>
