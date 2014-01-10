@@ -197,6 +197,12 @@ nav {
         li#github a:after {
             content: "\f09b";
         }
+
+        li#dynmap a:after {
+            content: "\f041";
+            display: block;
+            text-align: center;
+        }
     }
 }
 
