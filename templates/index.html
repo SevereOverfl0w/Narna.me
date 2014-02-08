@@ -21,8 +21,8 @@
     <main>
         <section id="main">
             <h1 id="title">Narna</h1>
-            <p>Welcome to Narna.me, we're currently undergoing some changes our main survival server is shut down.</p>
-            <span id="playerCount">Loading player count...</span>
+            <p>Welcome to Narna.me, we're currently baking a Prison Server!</p>
+            <span id="playerCount">Arming the player counter...</span>
             {% with messages = get_flashed_messages() %}
             {% for message in messages %}
             <div class="alert">{{ message }}<span class="close">&times;</span></div>
@@ -32,170 +32,17 @@
 	    <hr>
         <section id="donate">
             <h1>Donating</h1>
-            <article class="option">
-                <img class="opt-img" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/2/2f/Dirt.png" />
-                <h3>Dirt</h3>
-                <dl>
-                    <dt>Cost</dt>
-                    <dd>€2.50</dd>
-                    <dt>Time</dt>
-                    <dd>2 months</dd>
-                    <dt>Tag</dt>
-                    <dd>D</dt>
-                    <dt>Features</dt>
-                    <dd>
-                        <ul>
-                            <li>3 homes</li>
-                            <li>Use /back</li>
-			                <li>Make Pig Spawners</li>
-			                <li>Make Zombie Spawners</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F53VFU2CV7ZBC">Donate</a>
-            </article>
-            <article class="option">
-                <img class="opt-img" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0f/Oak_Wood_Planks.png" />
-                <h3>Wood</h3>
-                <dl>
-                    <dt>Cost</dt>
-                    <dd>€5.00</dd>
-                    <dt>Time</dt>
-                    <dd>2 months</dd>
-                    <dt>Tag</dt>
-                    <dd>D</dt>
-                    <dt>Features</dt>
-                    <dd>
-                        <ul>
-                            <li>4 homes</li>
-			                <li>Everything Dirt offers</li>
-                            <li>No Hunger dying</li>
-                            <li>Make Chicken Spawners</li>
-			                <li>Make Cow Spawners</li>
-			                <li>Make Zombie Spawners</li>
-		                    <li>Pig Disguise</li>
-			                <li>Zombie Disguise</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F53VFU2CV7ZBC">Donate</a>
-            </article>
-	        <article class="option">
-                <img class="opt-img" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/d4/Stone.png"/>
-                <h3>Stone</h3>
-                <dl>
-                    <dt>Cost</dt>
-                    <dd>€7.50</dd>
-                    <dt>Time</dt>
-                    <dd>2 months</dd>
-                    <dt>Tag</dt>
-                    <dd>D</dt>
-                    <dt>Features</dt>
-                    <dd>
-                        <ul>
-                            <li>5 homes</li>
-                            <li>Everything Wood offers</li>
-                            <li>Make Lifts</li>
-                            <li>Make Creeper Spawners</li>
-                            <li>Make Spider Spawners</li>
-			                <li>Make Skeleton Spawners</li>
-                            <li>Skeleton Disguise</li>
-                            <li>Sheep Disguise</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GAZ6FU6VS3VHC">Donate</a>
-            </article>
-            <article class="option">
-                <img class="opt-img" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/1/18/Iron_%28Block%29.png"/>
-                <h3>Iron</h3>
-                <dl>
-                    <dt>Cost</dt>
-                    <dd>€9.00</dd>
-                    <dt>Time</dt>
-                    <dd>2 months</dd>
-                    <dt>Tag</dt>
-                    <dd>D</dt>
-                    <dt>Features</dt>
-                    <dd>
-                        <ul>
-                            <li>6 homes</li>
-                            <li>Everything Stone offers</li>
-                            <li>Magic Carpet</li>
-                            <li>Make Enderman Spawners </li>
-                            <li>Make Pigman Spawners</li>
-                            <li>Chicken Disguise</li>
-                            <li>Creeper Disguise</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9C39QV6VXXT3Y">Donate</a>
-            </article>
-            <article class="option">
-                <img class="opt-img" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/a/a0/Gold_Block-Pre_Beta_1.9pre5.png" />
-                <h3>Gold</h3>
-                <dl>
-                    <dt>Cost</dt>
-                    <dd>€12.00</dd>
-                    <dt>Time</dt>
-                    <dd>2 months</dd>
-                    <dt>Tag</dt>
-                    <dd>D</dt>
-                    <dt>Features</dt>
-                    <dd>
-                        <ul>
-                            <li>7 homes</li>
-                            <li>Everything Iron offers</li>
-                            <li>Make Gates</li>
-                            <li>Make Squid Spawners </li>
-                            <li>Make Silverfish Spawners</li>
-                            <li>Spider Disguise</li>
-                            <li>Slime Disguise</li>
-			                <li>Baby Slime Disguise</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=7FHSEX55KGRH8">Donate</a>
-            </article>
-	        <article class="option">
-                <img class="opt-img" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/d0/Diamond_%28Block%29.png" />
-                <h3>Diamond</h3>
-                <dl>
-                    <dt>Cost</dt>
-                    <dd>€17.00</dd>
-                    <dt>Time</dt>
-                    <dd>3 months</dd>
-                    <dt>Tag</dt>
-                    <dd>D</dt>
-                    <dt>Features</dt>
-                    <dd>
-                        <ul>
-                            <li>10 homes</li>
-                            <li>Everything Gold offers</li>
-                            <li>150% mcMMO Leveling speed</li>
-                            <li>Make Bat Spawners </li>
-                            <li>Make Cave Spider Spawners</li>
-		            	    <li>Make Ocelot Spawners</li>
-                            <li>Baby Zombie Disguise</li>
-                            <li>Witch Disguise</li>
-                            <li>Cave Spider Disguise</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=SEUHQRGXT6NUU">Donate</a>
-            </article>
+            	<article>
+            		<p>Currently no ranks available, feel free to donate and receive a rank in the future!</p>
+            		<br>
+            		<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FLAEZGLAP9WY2" target="_blank">Donate</a>
+        	</article>
         </section>
 	    <hr>
         <section id="vote">
             <h1>Voting</h1>
             <article>
-                <a href="http://minecraft-mp.com/server/9042/vote/" target="_blank">Minecraft-MP</a>
-                <a href="http://minecraftservers.net/server/7830/vote/" target="_blank">MinecraftServers.net</a>
-                <a href="http://minecraft-server-list.com/server/108862/vote/" target="_blank">Minecraft-server-list.com</a>
-          	    <a href="http://minecraftservers.org/vote/25953" target="_blank">MinecraftServers.org</a>
-		        <a href="https://minestatus.net/59908-narnasurvival/vote" target="_blank">Minestatus.net</a>
-		        <a href="http://www.minepick.com/servers/5960/vote/" target="_blank">Minepick.com</a>
-		        <a href="http://mineservers.com/server/14091/vote" target="_blank">Mineservers.com</a> 
+                <p>Currently not available</p>
 	        </article>
         </section>
 
